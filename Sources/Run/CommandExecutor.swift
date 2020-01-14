@@ -49,6 +49,7 @@ class ActualTaskExecutor: TaskExecutor {
 
         task.standardOutput = stdoutPipe
         task.standardError = stderrPipe
+        task.standardInput = FileHandle.nullDevice
         task.launch()
         task.waitUntilExit()
 
